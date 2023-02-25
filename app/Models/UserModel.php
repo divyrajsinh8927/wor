@@ -4,6 +4,6 @@ use CodeIgniter\Model;
     class UserModel extends Model
     {
         protected $table = 'users';
-        protected $allowedFieelds = ['firstName','lastName','email','mobileNumber'];
+        protected $allowedFields = ['firstName','lastName','email','mobileNumber','passwordHash'];
     }
 ?>

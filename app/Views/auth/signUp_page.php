@@ -17,7 +17,7 @@
       <img src="<?=base_url()?>assets/media/signUpText.png" id="icon" alt="loginHeading" />
     </div>
 
-    <form action="#" method="POST">
+    <form action="<?= base_url()?>public/signUp" method="POST">
       <input type="text" id="txtFirstName" class="fadeIn second" name="txtFirstName" placeholder="Enter FirstName" >
       <input type="text" id="txtLastNAme" class="fadeIn third" name="txtLastName" placeholder="Enter LastName">
       <input type="text" id="txtEmail" class="fadeIn second" name="txtEmail" placeholder="Enter Email">
