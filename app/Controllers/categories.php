@@ -12,12 +12,18 @@ class categories extends BaseController
         {
             return redirect()->to(base_url() . 'public/login');
         }
-        echo view('categories');
+        $categoryModel = new CategoryModel();
+        $categories['categories_List'] = $categoryModel->findAll();
+        echo view('categories',$categories);
     }
 
-    public function getAllCategories()
+    public function addCategory()
     {
         $categoryModel = new CategoryModel();
-        $categories = $categoryModel->findAll();
+        $categoryData = ['categoryName' => $this->request->getVar('txtcategoryName')];
+
+        $categoryModel->save($categoryData);
+        return redirect()->to(base_url() . 'public/categories');
     }
+
 }
